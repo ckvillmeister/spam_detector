@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np 
 import string 
 import nltk      #natural language tool kit used for text processing 
-nltk.data.path.append('./nltk_data')
+#nltk.data.path.append('./nltk_data')
 from nltk.corpus import stopwords  #text processing 
 import string 
 from nltk.stem.porter import PorterStemmer  #text processing 
@@ -16,16 +16,16 @@ from xgboost import XGBClassifier
 # nltk.download('punkt', download_dir='nltk_data')
 # nltk.download('stopwords', download_dir='nltk_data')
 
-# try:
-#     nltk.data.find('tokenizers/punkt')
-# except LookupError:
-#     nltk.download('punkt')
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 
-# # Check if 'stopwords' is downloaded
-# try:
-#     nltk.data.find('corpora/stopwords')
-# except LookupError:
-#     nltk.download('stopwords')
+# Check if 'stopwords' is downloaded
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
 
 #function to convert SMS text to numerical form ,SMS text  we will receive on our deployed app to predict. 
 def transform_text(text): 
