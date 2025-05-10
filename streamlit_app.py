@@ -17,13 +17,13 @@ from xgboost import XGBClassifier
 # nltk.download('stopwords', download_dir='nltk_data')
 
 try:
-    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('nltk_data/tokenizers/punkt')
 except LookupError:
     nltk.download('punkt')
 
 # Check if 'stopwords' is downloaded
 try:
-    nltk.data.find('corpora/stopwords')
+    nltk.data.find('nltk_data/corpora/stopwords')
 except LookupError:
     nltk.download('stopwords')
 
