@@ -12,20 +12,20 @@ import pandas as pd
 ps=PorterStemmer()    
 from xgboost import XGBClassifier 
 
-# nltk.download('punkt') 
-# nltk.download('stopwords') 
+nltk.download('punkt', download_dir='nltk_data')
+nltk.download('stopwords', download_dir='nltk_data')
 
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt')
+# try:
+#     nltk.data.find('tokenizers/punkt')
+# except LookupError:
+#     nltk.download('punkt')
 
-# Check if 'stopwords' is downloaded
-try:
-    nltk.data.find('corpora/stopwords')
-except LookupError:
-    nltk.download('stopwords')
-    
+# # Check if 'stopwords' is downloaded
+# try:
+#     nltk.data.find('corpora/stopwords')
+# except LookupError:
+#     nltk.download('stopwords')
+
 #function to convert SMS text to numerical form ,SMS text  we will receive on our deployed app to predict. 
 def transform_text(text): 
         text=text.lower() 
