@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np 
 import string 
 import nltk      #natural language tool kit used for text processing 
+nltk.data.path.append('./nltk_data')
 from nltk.corpus import stopwords  #text processing 
 import string 
 from nltk.stem.porter import PorterStemmer  #text processing 
