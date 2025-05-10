@@ -29,6 +29,8 @@ except LookupError:
 
 #function to convert SMS text to numerical form ,SMS text  we will receive on our deployed app to predict. 
 def transform_text(text): 
+        nltk.download('punkt')
+        nltk.download('stopwords')
         text=text.lower() 
         y=[] 
         #tokenization 
